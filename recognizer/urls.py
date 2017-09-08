@@ -9,5 +9,5 @@ import os
 from . import views
 
 urlpatterns = [
-	url(r'^$', views.index, name='index'),
+	url(r'^$', views.output, name='output'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

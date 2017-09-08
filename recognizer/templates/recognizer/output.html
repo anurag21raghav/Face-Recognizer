@@ -1,0 +1,15 @@
+{% extends 'recognizer/base.html' %}
+
+{% block content %}
+
+    <h1>Hellooooooooooooooo</h1>
+
+    {% for record in records %}
+        <div>
+            <h1>{{ "Matched Face ({}%)".format(record['Similarity']) }}</h1>
+            <h1>{{ "  FaceId : {}".format(record['Face']['FaceId']) }}</h1>
+            <h1>{{ "  ImageId : {}".format(record['Face']['ExternalImageId']) }}</h1>
+        </div>
+    {% endfor %}
+
+{% endblock %}
